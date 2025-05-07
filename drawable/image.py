@@ -24,7 +24,7 @@ def imageResult(prompt='一只猫正在画梵高', height=1024, width=1024):
             # print(type(result))
         image_url = result['images_url'][0]
         print(image_url)
-        print(type(image_url))
+        #print(type(image_url))
         return image_url
     else:
         print(submit_response_json['msg'])

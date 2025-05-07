@@ -2,6 +2,7 @@ import asyncio
 import logging
 import datetime
 import os.path
+from contextlib import suppress
 
 from .video_copy import tts_replical_session, logging, create_vcn_task, get_vcn_list, get_vcn_task, get_vcn_task_list,delete_task, delete_all_task
 from .video_decode import other_audio
@@ -10,7 +11,11 @@ from .video_decode import other_audio
 def story_tell(text):
     FORMAT = '%(asctime)s %(levelname)s: %(message)s'
     logging.basicConfig(level=logging.INFO, format=FORMAT)
-    loop = asyncio.get_event_loop()
+    try:
+        loop = asyncio.get_event_loop()
+    except RuntimeError:
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
     app_id = '2025978227'
     app_key = 'MGrAUHueZkEchisd'
     tts_obj = tts_replical_session(app_id, app_key)
@@ -35,8 +40,27 @@ def story_tell(text):
     if not os.path.exists(player):
         os.mkdir(player)
     file_name = os.path.join(player, formatted_date)
-    other_audio(app_id=app_id, app_key=app_key, vcn=vcn, text=text_need, engineid=engineid,
-                file_name=file_name)
+
+    # 确保异步操作在事件循环中执行
+    async def async_wrapper():
+        return other_audio(
+            app_id=app_id,
+            app_key=app_key,
+            vcn=vcn,
+            text=text_need,
+            engineid=engineid,
+            file_name=file_name
+        )
+
+    try:
+        loop.run_until_complete(async_wrapper())
+    finally:
+        # 清理事件循环
+        with suppress(Exception):
+            loop.close()
+
+    # other_audio(app_id=app_id, app_key=app_key, vcn=vcn, text=text_need, engineid=engineid,
+    #             file_name=file_name)
 
     return file_name
 

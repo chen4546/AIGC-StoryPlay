@@ -28,10 +28,10 @@ def progress(task_id):
     uri_params = uri_params[:-1]
 
     url = 'http://{}{}?{}'.format(DOMAIN, URI, uri_params)
-    print('url:', url)
+    #print('url:', url)
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
-        print(response.json())
+        #print(response.json())
         return response.json()['result']
     else:
         print(response.status_code, response.text)

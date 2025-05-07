@@ -23,7 +23,7 @@ def get_path(file_name, file_class):
         return sound_path
     elif file_class == 'image':
         image_path = os.path.join(father_path, file_name) + ".jpg"
-        print(file_name)
+        #print(file_name)
         print(image_path)
         return image_path
 
@@ -36,19 +36,19 @@ def sound_play(sound_path):
 def image_play(image_path):
     img_path = image_path
     img = cv2.imread(img_path)
-    cv2.namedWindow('myPicture', 0)
-    cv2.resizeWindow('myPicture', 500, 500)
-    cv2.imshow('myPicture', img)
+    cv2.namedWindow('scene', 0)
+    cv2.resizeWindow('scene', 500, 500)
+    cv2.imshow('scene', img)
     cv2.waitKey()
-    cv2.destroyWindow('myPicture')
+    cv2.destroyWindow('scene')
 
 
 def ai_content_split(ai_content):
     content = json.loads(ai_content)
     plot = content['plot']
     scene = content['scene']
-    print(content)
-    print(type(content))
+    #print(content)
+    #print(type(content))
     return [plot, scene]
 
 
@@ -77,7 +77,7 @@ def main():
     }
     messages.append(system_prompts)
     messages.append(start_prompts)
-    messages.append(user_init)
+    #messages.append(user_init)
     result = sync_vivogpt(messages, user_init, uuid_user)
     messages = result[0]
     ai_content = result[1]

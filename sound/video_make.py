@@ -107,7 +107,7 @@ class TTS(object):
                         #print(555)
                         break
                     jre["data"]["audio"] = ''
-                    print(jre)
+                    #print(jre)
                     #print(666)
             else:
                 print("error,recv type:", code)
