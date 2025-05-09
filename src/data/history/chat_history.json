@@ -114,5 +114,33 @@
   {
     "role": "assistant",
     "content": "{\"plot\":\"你想起了小时候在草原上玩耍的情景，那是一段无忧无虑的时光。你决定去寻找那片草原，重温那些美好的回忆。\",\"scene\":\"你离开了城市，踏上了前往草原的旅程。你穿过森林和山脉，终于来到了那片熟悉的草原。你看到了牛羊在草地上悠闲地吃草，看到了蝴蝶在花丛中翩翩起舞。你感受到了大自然的魅力，也感受到了内心的平静。你坐在草地上，静静地享受着这份宁静与美好。\"}"
+  },
+  {
+    "role": "system",
+    "content": "I want you to play a text-based adventure game. I'll type the command and you'll reply with a description of what the character saw and other information. I hope you only reply the game output in Chinese and nothing else. Don't write explanations. Do not type commands unless I instruct you to do so. When I need supplementary settings, I put the text in brackets (like this). When you need to use a key action, you can randomly decide whether it is successful or not. The probability of success is up to you according to the specific situation, or I will add it in (). The background is a different world continent, where there are different countries, regions and species, including magicians, swordsmen, priests, etc. Please conceive the complete power and key figures. The following characters need to include gender, age or approximate age when it is the first time or when it is suitable. My gender is male and I am 18 years old. Tell me the gender and age of other characters. There are three human countries in this world, one orc country, and there are elves, dragons and other creatures, and there are also demons. Please make reasonable settings for politics, economy, military, culture, etc., as well as terrain, legends, etc. Please add the characters and events that appear in the plot, please add my interpersonal relationship, including no less than 3 close women, complete background and identity, and give me a systematic introduction. Please add part of the English translation as a supplement to the dialogue so that I can learn English better. Please add some accidents and more character interactions in the development of the plot, and increase the participation of characters instead of me alone deciding the direction of the entire plot. Please pay attention to the rationality, logic, and completeness of the plot before and after, and do not present inconsistent descriptions. Please finish the background and me, and start the plot when I walk out of the house"
+  },
+  {
+    "role": "system",
+    "content": "每次回复都请详细地描述当前故事的剧情和场景"
+  },
+  {
+    "role": "system",
+    "content": "麻烦你每次都按照以下格式给出回复{\"plot\":\"剧情...\",\"scene\":\"当前剧情的场景描写...\"}\n"
+  },
+  {
+    "role": "user",
+    "content": "开始吧"
+  },
+  {
+    "role": "assistant",
+    "content": "{\"plot\":\"你叫做艾瑞克，是一名18岁的年轻剑士。你的家乡位于人类国度中的赛尔城，这是一个繁荣的城市，位于大陆的中心地带。你的父亲是一名著名的剑士，母亲则是一位温柔的牧师。你的家族在赛尔城中享有很高的声望。今天是你成年的日子，你决定走出家门，去探索这个神秘的世界。\",\"scene\":\"你走出家门，感受到了清晨的清新空气。你看到你的父母在门口微笑着看着你。你的父亲穿着一身华丽的铠甲，腰间挂着一把锋利的剑。你的母亲则穿着一袭白色的长袍，手中拿着一根镶嵌着宝石的法杖。他们看起来非常自豪和欣慰。你向他们挥了挥手，然后转身向城市中心走去。\"}"
+  },
+  {
+    "role": "user",
+    "content": "前面有一个中国人和一个美国人"
+  },
+  {
+    "role": "assistant",
+    "content": "{\"plot\":\"你遇到了一个中国人和一个美国人，他们看起来都很友好。中国人叫做李明，美国人叫做约翰。\",\"scene\":\"你看到李明和约翰正在聊天，他们看起来很开心。你走过去，向他们打招呼。李明和约翰也很热情地回应了你，并向你介绍了他们自己。\"}"
   }
 ]
