@@ -2,3 +2,5 @@ __pycache__
 .idea
 /config/apikey.json
 src/data/history/chat_history.json
+*.jpg
+*.wav
