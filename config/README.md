@@ -4,10 +4,12 @@
 
 ### 文件说明
 
-* `apikey.json` - 存储项目访问外部API服务所需的密钥信息，包含字段：
+* `apikey.json` - 存储项目访问外部API服务所需的密钥信息(需自行创建)，包含字段：
 
   * app\_id - 应用标识符
   * app\_key - 应用认证密钥
+
+* `apikey_example.json` - apikey格式示例文件
 
 ### 配置方法
 
