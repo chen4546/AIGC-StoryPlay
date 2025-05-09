@@ -1,30 +1,32 @@
 import os
+import threading
 import uuid
 
 import cv2
-import json
-import threading
-
 import numpy as np
-from PyQt5.Qt import QApplication, QWidget, QTextEdit, QLineEdit, QLabel, QPushButton, QVBoxLayout, QHBoxLayout
-from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
-from PyQt5.QtCore import QUrl, Qt
 import winsound
+from PyQt5.Qt import QWidget, QTextEdit, QLineEdit, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QApplication
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QIcon
+from PyQt5.QtMultimedia import QMediaPlayer
 
+from src.ai.prompts.load_prompts import load_prompts
 from src.auth.load_apikey import load_apikey
+from src.other.cv2_to_pixmap import cv2_to_pixmap
 from src.story_generation import image_draw, story_tell, ai_content_split, sync_vivogpt, load_message_from_json, \
     get_path
 
-from src.ai.prompts.load_prompts import load_prompts
-from src.other.cv2_to_pixmap import cv2_to_pixmap
+ROOT_PATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 class GameGUI(QWidget):
     def __init__(self):
         super().__init__()
+        self.logo = "assets/images/logo.png"
         self.ai_content = None
         self.uuid_user = str(uuid.uuid4())
         self.messages = load_message_from_json()
+
         self.initUI()
         self.media_player = QMediaPlayer()
 
@@ -35,6 +37,7 @@ class GameGUI(QWidget):
         # 可视化组件
         self.setWindowTitle('奇幻大陆冒险')
         self.setGeometry(300, 300, 1200, 800)
+        self.setWindowIcon(QIcon(os.path.join(ROOT_PATH, self.logo)))
 
         # 故事文本显示
         self.story_view = QTextEdit()
