@@ -66,21 +66,21 @@ StoryPlay/
     │   ├── auth_util_story.py
     │   └── load_apikey.py
     │
-    ├─data/                      # 数据管理
+    ├─data/                     # 数据管理
     │   ├── README.md           # 数据管理说明
     │   ├── json_ls.py
-    │   └── history/             # 对话历史记录
+    │   └── history/            # 对话历史记录
     │       ├── chat_history.json
     │       └── README.md       # 对话历史说明
     │
-    ├─other/                     # 其他工具
+    ├─other/                    # 其他工具
     │   ├── README.md           # 其他工具说明
     │   └── cv2_to_pixmap.py
     │
-    ├─utils/                     # 通用工具
+    ├─utils/                    # 通用工具
     │   └── README.md           # 通用工具说明
     │
-    └─ui/                        # 用户界面
+    └─ui/                       # 用户界面
         ├── main_window.py      # 主界面代码
         └── README.md           # 用户界面说明
         
