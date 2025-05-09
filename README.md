@@ -18,7 +18,7 @@ StoryPlay/
 │   └── sounds/                 # 音效资源
 │       ├── README.md           # 音效资源说明
 │       └── your player's voice/              # 特定角色音效
-│           ├── YYYY_mm_dd_HH_MM_SS_pcm.wav
+│           └── YYYY_mm_dd_HH_MM_SS_pcm.wav
 │
 ├── config/                     # 配置文件夹
 │   ├── apikey.json             # API 密钥配置(需自行配置)
