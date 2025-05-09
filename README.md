@@ -13,14 +13,12 @@ StoryPlay/
 │
 ├── assets/                     # 游戏资源文件夹
 │   ├── images/                 # 图像资源
-│   │   ├── 2025_05_07_22_51_33.jpg
-│   │   ├── 2025_05_07_22_52_48.jpg
+│   │   ├── YYYY_mm_dd_HH_MM_SS.jpg
 │   │   └── README.md           # 图像资源说明
 │   └── sounds/                 # 音效资源
 │       ├── README.md           # 音效资源说明
-│       └── manbo/              # 特定角色音效
-│           ├── 2025_05_07_22_51_35_pcm.wav
-│           └── 2025_05_07_22_52_50_pcm.wav
+│       └── your player's voice/              # 特定角色音效
+│           ├── YYYY_mm_dd_HH_MM_SS_pcm.wav
 │
 ├── config/                     # 配置文件夹
 │   ├── apikey.json             # API 密钥配置(需自行配置)
