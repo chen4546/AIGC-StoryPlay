@@ -1,2 +1,3 @@
 __pycache__
 /config/apikey.json
+src/data/history/chat_history.json
