@@ -17,7 +17,7 @@ StoryPlay/
 │   │   └── README.md           # 图像资源说明
 │   └── sounds/                 # 音效资源
 │       ├── README.md           # 音效资源说明
-│       └── your player's voice/              # 特定角色音效
+│       └── plot sound/         # 特定角色音色的旁白音效
 │           └── YYYY_mm_dd_HH_MM_SS_pcm.wav
 │
 ├── config/                     # 配置文件夹
