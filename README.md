@@ -23,7 +23,8 @@ StoryPlay/
 │           └── 2025_05_07_22_52_50_pcm.wav
 │
 ├── config/                     # 配置文件夹
-│   ├── apikey.json             # API 密钥配置
+│   ├── apikey.json             # API 密钥配置(需自行配置)
+│   ├── apikey_example.json     # API 密钥示例
 │   └── README.md               # 配置文件说明
 │
 ├── docs/                       # 文档文件夹
