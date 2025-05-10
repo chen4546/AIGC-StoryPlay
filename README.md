@@ -103,3 +103,11 @@ pip install -r requirements.txt
 
 * 确保API密钥有效
 * 保持网络连接正常以调用AI接口服务
+
+## 项目demo演示
+
+![项目演示图片](docs/demo.png)
+
+## 项目文档
+
+参考 `docs` 目录下的项目文档
