@@ -12,7 +12,7 @@ def load_vcn(vcn_path=vcn_path):
             api_key = json.load(f)
             return api_key
     except FileNotFoundError:
-        print(f"[提示] 未找到密钥文件，请查看 {vcn_path} 是否存在")
+        print(f"[提示] 未找到vcn文件，请查看 {vcn_path} 是否存在")
     except Exception as e:
-        print(f"[错误] 加载密钥失败: {str(e)}")
+        print(f"[错误] 加载vcn失败: {str(e)}")
 
