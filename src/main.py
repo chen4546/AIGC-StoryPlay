@@ -3,7 +3,7 @@ from ui.main_window import GameGUI, QApplication
 
 def main():
     app = QApplication([])
-    window = GameGUI("other")
+    window = GameGUI()
     window.show()
     app.exec_()
 
