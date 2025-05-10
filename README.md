@@ -11,10 +11,6 @@
 
 ![Poster2](docs/poster2.png)
 
-<video width="320" height="240" controls>
-    <source src="docs/demo.mp4" type="video/mp4">
-</video>
-
 ## 项目结构
 
 ```
