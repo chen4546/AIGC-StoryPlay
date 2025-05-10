@@ -14,6 +14,7 @@ StoryPlay/
 ├── assets/                     # 游戏资源文件夹
 │   ├── images/                 # 图像资源
 │   │   ├── YYYY_mm_dd_HH_MM_SS.jpg
+│   │   ├── logo.png            # 程序logo文件
 │   │   └── README.md           # 图像资源说明
 │   └── sounds/                 # 音效资源
 │       ├── README.md           # 音效资源说明
