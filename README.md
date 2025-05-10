@@ -4,6 +4,13 @@
 
 基于Python的 `StoryPlay` 游戏项目，通过调用 `vivo` 提供的AI接口生成互动故事文本、场景图像和语音音效，提供沉浸式文字冒险体验。
 
+## 项目海报 
+### 开始你的冒险之旅吧
+
+![Poster1](docs/poster1.png)
+
+![Poster2](docs/poster2.png)
+
 ## 项目结构
 
 ```
