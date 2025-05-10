@@ -118,3 +118,7 @@ pip install -r requirements.txt
 ## 项目文档
 
 参考 `docs` 目录下的项目文档
+
+## 项目仓库
+
+`https://github.com/chen4546/StoryPlay.git`
