@@ -23,6 +23,7 @@ StoryPlay/
 ├── config/                     # 配置文件夹
 │   ├── apikey.json             # API 密钥配置(需自行配置)
 │   ├── apikey_example.json     # API 密钥示例
+│   ├── vcn.json                # 用户个性化音色配置(需自行配置)
 │   └── README.md               # 配置文件说明
 │
 ├── docs/                       # 文档文件夹
