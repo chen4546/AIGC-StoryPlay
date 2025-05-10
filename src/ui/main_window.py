@@ -36,7 +36,7 @@ class GameGUI(QWidget):
 
     def initUI(self):
         # 可视化组件
-        self.setWindowTitle('奇幻大陆冒险')
+        self.setWindowTitle('StoryPlay')
         self.setGeometry(300, 300, 1200, 800)
         self.setWindowIcon(QIcon(os.path.join(ROOT_PATH, self.logo)))
 
