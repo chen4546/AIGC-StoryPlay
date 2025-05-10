@@ -16,7 +16,7 @@
 调用 `story_tell` 函数生成语音：
 
 ```
-audio_path = story_tell(text, api_id, api_key)
+audio_path = story_tell(text, api_id, api_key, plater_setting)
 ```
 
 ## 注意事项
@@ -24,3 +24,4 @@ audio_path = story_tell(text, api_id, api_key)
 * 音色克隆需提前创建并获取音色标识符（vcn）
 * 语音生成可能涉及异步操作，需正确处理事件循环
 * 音频文件默认保存路径：`assets/sounds` 及其子文件夹
+* `story_tell` 接口初始使用 `video_decode` 中的 `human_audio`函数,音色默认使用 `GAME_GIR_LTY` ,如需修改自定义音色,可修改

@@ -10,6 +10,7 @@
   * app\_key - 应用认证密钥
 
 * `apikey_example.json` - apikey格式示例文件
+* `vcn.json` - 用户复刻音频vcn存放文件，具体查看 `src\ai\sounds` 目录下的说明
 
 ### 配置方法
 

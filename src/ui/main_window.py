@@ -20,12 +20,13 @@ ROOT_PATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fi
 
 
 class GameGUI(QWidget):
-    def __init__(self):
+    def __init__(self,player_setting="human"):
         super().__init__()
         self.logo = "assets/images/logo.png"
         self.ai_content = None
         self.uuid_user = str(uuid.uuid4())
         self.messages = load_message_from_json()
+        self.player_setting=player_setting
 
         self.initUI()
         self.media_player = QMediaPlayer()
@@ -122,7 +123,7 @@ class GameGUI(QWidget):
         self.image_label.setScaledContents(True)
 
         # 播放语音
-        sound_path = get_path(story_tell(plot, api_id=load_apikey()['app_id'], api_key=load_apikey()['app_key']),
+        sound_path = get_path(story_tell(plot, api_id=load_apikey()['app_id'], api_key=load_apikey()['app_key'],player_setting=self.player_setting),
                               'sound')
         print(sound_path)
         winsound.PlaySound(sound_path, winsound.SND_FILENAME)

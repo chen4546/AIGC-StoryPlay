@@ -55,6 +55,7 @@ def ai_content_split(ai_content):
 
 
 def main():
+    player_setting="human"
     uuid_user = str(uuid.uuid4())
 
     messages = load_message_from_json()
@@ -86,7 +87,7 @@ def main():
     plot_and_scene = ai_content_split(ai_content)
     plot = plot_and_scene[0]
     scene = plot_and_scene[1]
-    sound_path = get_path(story_tell(plot,api_id=load_apikey()['app_id'],api_key=load_apikey()['app_key']), 'sound')
+    sound_path = get_path(story_tell(plot,api_id=load_apikey()['app_id'],api_key=load_apikey()['app_key'],player_setting=player_setting), 'sound')
     image_path = get_path(image_draw(scene), 'image')
     sound_play(sound_path=sound_path)
     image_play(image_path=image_path)
@@ -111,7 +112,7 @@ def main():
         plot_and_scene = ai_content_split(ai_content)
         plot = plot_and_scene[0]
         scene = plot_and_scene[1]
-        sound_path = get_path(story_tell(plot,api_id=load_apikey()['app_id'],api_key=load_apikey()['app_key']), 'sound')
+        sound_path = get_path(story_tell(plot,api_id=load_apikey()['app_id'],api_key=load_apikey()['app_key'],player_setting=player_setting), 'sound')
         image_path = get_path(image_draw(scene), 'image')
         sound_play(sound_path=sound_path)
         image_play(image_path=image_path)

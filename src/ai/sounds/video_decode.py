@@ -111,7 +111,7 @@ def long_audio(app_id,app_key,vcn,text):
         with open(f'{k}_pcm.wav', 'wb') as fd:
             fd.write(wav_io.read())
         break
-def human_audio(app_id,app_key,vcn,text):
+def human_audio(app_id,app_key,vcn,text,file_name):
     for k, v in Humanoid.__dict__.items():
         if k.find('__') != -1:
             continue
@@ -129,7 +129,7 @@ def human_audio(app_id,app_key,vcn,text):
         # pcm
         pcm_buffer = tts.gen_radio(aue=AueType.PCM, vcn=k, text=text)
         wav_io = pcm2wav(pcm_buffer)
-        with open(f'{k}_pcm.wav', 'wb') as fd:
+        with open(f'{file_name}_pcm.wav', 'wb') as fd:
             fd.write(wav_io.read())
         break
 def other_audio(app_id,app_key,vcn,text,engineid,file_name):
